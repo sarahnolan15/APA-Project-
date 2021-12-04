@@ -1,0 +1,17 @@
+selection = ' '
+while selection != '5':
+    print('1.Stock control: ')
+    print('2.Shopping basket: ')
+    print('3.Correct change: ')
+    print('4.Item Packaging: ')
+
+    selection = input('enter option 1-5: ')
+
+    if selection == '1':
+                
+    if selection == '2':
+        
+    if selection == '3':
+        
+
+    if selection == '4':
