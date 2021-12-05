@@ -11,11 +11,12 @@ luxury_price = 50
 essential_price = 30
 gift_price = 20
 
+items =[[]]
+
 if selection == '1':
 ############
 #task 2 & 3
 ############
-    items =[[]]
     item_name = input('enter name of item: ')
     item_type = input('enter type of item: ')
     exp_date = input(float('enter expiry date: '))
