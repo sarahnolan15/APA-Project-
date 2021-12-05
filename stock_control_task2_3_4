@@ -1,0 +1,35 @@
+selection = 0
+while selection != '5':
+    print('1.Stock control: ')
+    print('2.Shopping basket: ')
+    print('3.Correct change: ')
+    print('4.Item Packaging: ')
+
+    selection = input('enter option 1-5: ')
+
+luxury_price = 50
+essential_price = 30
+gift_price = 20
+
+if selection == '1':
+############
+#task 2 & 3
+############
+    items =[[]]
+    item_name = input('enter name of item: ')
+    item_type = input('enter type of item: ')
+    exp_date = input(float('enter expiry date: '))
+    items.append(item_name, item_type, exp_date)
+#######
+#task 4
+#######
+    cost = 0
+    for i in items:
+        if item_type == 'luxury':
+            cost += luxury_price
+        elif item_type == 'essential':
+            cost+= essential_price
+        else:
+            cost += gift_price
+    
+    print(cost)
