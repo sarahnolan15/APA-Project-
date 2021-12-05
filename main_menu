@@ -6,6 +6,10 @@ while selection != '5':
     print('4.Item Packaging: ')
 
     selection = input('enter option 1-5: ')
+    
+luxury_price = 50
+essential_price = 30
+gift_price = 20
 
     if selection == '1':
                 
