@@ -1,15 +1,22 @@
 import datetime
 
+#set prices
 luxury_price = 50
 essential_price = 30
 gift_price = 20
+#list of items
 items =[]
+
 cost = 0
 
+#type counters & list
 l_count = 0
 g_count = 0
 e_count = 0
 type_list = []
+
+#shopping basket total
+total = 0
 
 ##########
 # menu task 1
@@ -74,17 +81,19 @@ while selection != '5':
 #######              
     if selection == '2':
         choice = ' '
-        while choice != '4':
-            print('enter 1 to add items')
-            print('enter 2 to see list')
+        while choice != '6':
+            print('enter 1 to add items to basket')
+            print('enter 2 to see basket')
             print('enter 3 to see counts')
             print('enter 4 to see total cost')
+            print('enter 5 to calculate total including tax')
+            print('press 6 to return to home')
 
             choice = input('enter your choice: ')
                 
             if choice == '1':
                 a = input('enter the item that you would like to add:  ')
-                b = input('enter wether its a luxury, essential or gift:  ')
+                b = input('enter whether its a luxury, essential or gift item:  ')
                 shopping_list.append([a,b])
                 type_list.append(b)
         
@@ -103,8 +112,27 @@ while selection != '5':
                 print(g_count)
 
             if choice == '4':
-                total_price = l_count*50 + e_count*30 + g_count*20
+                total_price = l_count*luxury_price + e_count*essential_price + g_count*gift_price
                 print(total_price)
+
+            if choice == '5':
+                for i in type_list:
+                    if i == 'luxury':
+                        luxury_tax = luxury_price * 0.2
+                        total1 = luxury_price + luxury_tax
+                        total += total1
+                    if i == 'essential':
+                        essential_tax = essential_price * 0.1
+                        total2 = essential_price + essential_tax
+                        total += total2
+                    if i == 'gift':
+                        gift_tax = gift_price * 0.05
+                        total3 = gift_price + gift_tax
+                        total += total3
+
+                print('total including tax')
+                print(total)
+
 
     #if selection == '3':
         
