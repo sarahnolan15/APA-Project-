@@ -20,10 +20,6 @@ while selection != '5':
 
         selection = input('Enter your choice: ')
         
-        luxury_price = 50
-        essential_price = 30
-        gift_price = 20
-
         items =[]
         
         if selection == '1':
