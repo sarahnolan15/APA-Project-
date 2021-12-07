@@ -1,3 +1,5 @@
+import datetime
+
 selection = ' '
 while selection != '5':
     print('1.Stock control: ')
@@ -7,12 +9,12 @@ while selection != '5':
 
     selection = input('enter option 1-5: ')
     
-luxury_price = 50
-essential_price = 30
-gift_price = 20
+    luxury_price = 50
+    essential_price = 30
+    gift_price = 20
 
     if selection == '1':
-        print('Enter 1 to view products')
+        print('Enter 1 to add products')
         print('Enter 2 to view orders')
         print('Enter 3 to exit')
 
@@ -22,16 +24,18 @@ gift_price = 20
         essential_price = 30
         gift_price = 20
 
-        items =[[]]
+        items =[]
         
         if selection == '1':
 ############
 # stock control task 2 & 3
 ############
             item_name = input('enter name of item: ')
-            item_type = input('enter type of item, 'luxury', 'essential' or 'gift': ')
-            exp_date = input(float('enter expiry date: '))
-            items.append(item_name, item_type, exp_date)
+            item_type = input('enter type of item: ')
+            exp_date = input("enter time in this format yyyy-mm-dd: ")
+            time= datetime.datetime.strptime(exp_date, "%Y-%m-%d")
+            items.append([item_name, item_type, exp_date])
+            print(items)
             
 #######
 #stock control task 4
@@ -47,13 +51,13 @@ gift_price = 20
     
             print(cost)
 
-        if choice == '2':
+        if selection == '2':
             print('B')
             #view items
                 
-    if selection == '2':
+    #if selection == '2':
         
-    if selection == '3':
+    #if selection == '3':
         
 
-    if selection == '4':
+    #if selection == '4':
