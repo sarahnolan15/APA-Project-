@@ -1,11 +1,16 @@
 import datetime
 
-selection = ' '
 luxury_price = 50
 essential_price = 30
 gift_price = 20
 items =[]
 cost = 0
+
+##########
+# menu task 1
+##########
+
+selection = ' '
 while selection != '5':
     print('1.Stock control: ')
     print('2.Shopping basket: ')
@@ -15,41 +20,45 @@ while selection != '5':
     selection = input('enter option 1-5: ')
 
     if selection == '1':
-        print('Enter 1 to add products')
-        print('Enter 2 to view orders')
-        print('Enter 3 to exit')
+        choice = ' '
+        while choice != '3':
+            print('Enter 1 to add products')
+            print('Enter 2 to view orders')
+            print('Enter 3 to exit')
 
-        selection = input('Enter your choice: ')
+            choice = input('Enter your choice: ')
         
-        if selection == '1':
+        
+            if choice == '1':
 ############
 # stock control task 2 & 3
 ############
-            item_name = input('enter name of item: ')
-            item_type = input('enter type of item: ')
-            exp_date = input("enter time in this format yyyy-mm-dd: ")
-            time= datetime.datetime.strptime(exp_date, "%Y-%m-%d")
-            items.append([item_name, item_type, exp_date])
-            print(items)
+                item_name = input('enter name of item: ')
+                item_type = input('enter type of item: ')
+                exp_date = input("enter time in this format yyyy-mm-dd: ")
+                time= datetime.datetime.strptime(exp_date, "%Y-%m-%d")
+                items.append([item_name, item_type, exp_date])
             
 #######
 #stock control task 4
 #######
-            for i in items:
-                if item_type == 'luxury':
-                    cost += luxury_price
-                elif item_type == 'essential':
-                    cost+= essential_price
-                else:
-                    cost += gift_price
-    
-            print(cost)
-
-        if selection == '2':
-            print(items)
-            #view items
                 
-    #if selection == '2':
+                for i in items:
+                    if item_type == 'luxury':
+                        cost += luxury_price
+                    elif item_type == 'essential':
+                        cost+= essential_price
+                    else:
+                        cost += gift_price
+    
+                print(cost)
+######
+# stock control task 6
+######
+            if choice == '2':
+                print(items)
+            
+               
         
     #if selection == '3':
         
