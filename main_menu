@@ -20,6 +20,11 @@ while selection != '5':
     selection = input('enter option 1-5: ')
 
     if selection == '1':
+
+#######
+# stock control task 5
+#######
+
         choice = ' '
         while choice != '3':
             print('Enter 1 to add products')
@@ -30,6 +35,7 @@ while selection != '5':
         
         
             if choice == '1':
+            
 ############
 # stock control task 2 & 3
 ############
