@@ -1,6 +1,11 @@
 import datetime
 
 selection = ' '
+luxury_price = 50
+essential_price = 30
+gift_price = 20
+items =[]
+cost = 0
 while selection != '5':
     print('1.Stock control: ')
     print('2.Shopping basket: ')
@@ -8,10 +13,6 @@ while selection != '5':
     print('4.Item Packaging: ')
 
     selection = input('enter option 1-5: ')
-    
-    luxury_price = 50
-    essential_price = 30
-    gift_price = 20
 
     if selection == '1':
         print('Enter 1 to add products')
@@ -19,8 +20,6 @@ while selection != '5':
         print('Enter 3 to exit')
 
         selection = input('Enter your choice: ')
-        
-        items =[]
         
         if selection == '1':
 ############
@@ -36,7 +35,6 @@ while selection != '5':
 #######
 #stock control task 4
 #######
-            cost = 0
             for i in items:
                 if item_type == 'luxury':
                     cost += luxury_price
@@ -48,7 +46,7 @@ while selection != '5':
             print(cost)
 
         if selection == '2':
-            print('B')
+            print(items)
             #view items
                 
     #if selection == '2':
