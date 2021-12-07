@@ -18,7 +18,7 @@ while selection != '5':
         print('Enter 2 to view orders')
         print('Enter 3 to exit')
 
-        choice = input('Enter your choice: ')
+        selection = input('Enter your choice: ')
         
         luxury_price = 50
         essential_price = 30
