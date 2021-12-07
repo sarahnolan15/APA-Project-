@@ -17,7 +17,13 @@ gift_price = 20
         print('Enter 3 to exit')
 
         choice = input('Enter your choice: ')
+        
+        luxury_price = 50
+        essential_price = 30
+        gift_price = 20
 
+        items =[[]]
+        
         if choice == '1':
             print('A')
             #add items
