@@ -6,6 +6,11 @@ gift_price = 20
 items =[]
 cost = 0
 
+l_count = 0
+g_count = 0
+e_count = 0
+type_list = []
+
 ##########
 # menu task 1
 ##########
@@ -64,29 +69,42 @@ while selection != '5':
             if choice == '2':
                 print(items)
             
-               
+#######
+# shopping basket task 1 and 2
+#######              
     if selection == '2':
-        a = input('enter the item that you would like to add:  ')
-        b = input('enter wether its a luxury, essential or gift:  ')
-        shopping_list.append(a)
-        cost_with_tax = 0
-        for i in shopping_list:
-            if b == 'luxury':
-                luxury_tax =  luxury_price * 0.2
-                including_tax = luxury_price + luxury_tax
-                cost_with_tax += including_tax
-            elif b == 'essential':
-                essential_tax = essential_price * 0.1
-                including_tax = essential_price + essential_tax
-                cost_with_tax += including_tax
-            else:
-                gift_tax = gift_price * 0.05
-                including_tax = gift_price + gift_tax
-                cost_with_tax += including_tax
+        choice = ' '
+        while choice != '4':
+            print('enter 1 to add items')
+            print('enter 2 to see list')
+            print('enter 3 to see counts')
+            print('enter 4 to see total cost')
+
+            choice = input('enter your choice: ')
+                
+            if choice == '1':
+                a = input('enter the item that you would like to add:  ')
+                b = input('enter wether its a luxury, essential or gift:  ')
+                shopping_list.append([a,b])
+                type_list.append(b)
         
-        print(cost_with_tax)
-        shopping_list.append(cost_with_tax)
-        print(shopping_list)
+                l_count = type_list.count('luxury')
+                e_count = type_list.count('essential')
+                g_count = type_list.count('gift')
+        
+    
+            if choice == '2':
+                print(shopping_list)
+                print(type_list)
+    
+            if choice == '3':
+                print(l_count)
+                print(e_count)
+                print(g_count)
+
+            if choice == '4':
+                total_price = l_count*50 + e_count*30 + g_count*20
+                print(total_price)
 
     #if selection == '3':
         
