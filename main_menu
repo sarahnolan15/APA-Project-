@@ -25,8 +25,13 @@ gift_price = 20
         items =[[]]
         
         if choice == '1':
-            print('A')
-            #add items
+############
+#task 2 & 3
+############
+            item_name = input('enter name of item: ')
+            item_type = input('enter type of item: ')
+            exp_date = input(float('enter expiry date: '))
+            items.append(item_name, item_type, exp_date)
 
         if choice == '2':
             print('B')
