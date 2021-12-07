@@ -9,7 +9,7 @@ cost = 0
 ##########
 # menu task 1
 ##########
-
+shopping_list=[]
 selection = ' '
 while selection != '5':
     print('1.Stock control: ')
@@ -65,7 +65,23 @@ while selection != '5':
                 print(items)
             
                
+     if selection == '2':
+        a = input('enter the item that you would like to add:  ')
+        b = input('enter wether its a luxury, essential or gift:  ')
+        shopping_list.append(a)
+        cost = 0
+        for i in shopping_list:
+            if b == 'luxury':
+                cost += luxury_price
+            elif b == 'essential':
+                cost+= essential_price
+            else:
+                cost += gift_price
         
+        print(cost)
+        shopping_list.append(cost)
+        print(shopping_list)
+
     #if selection == '3':
         
 
