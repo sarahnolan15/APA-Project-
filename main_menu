@@ -65,21 +65,27 @@ while selection != '5':
                 print(items)
             
                
-     if selection == '2':
+    if selection == '2':
         a = input('enter the item that you would like to add:  ')
         b = input('enter wether its a luxury, essential or gift:  ')
         shopping_list.append(a)
-        cost = 0
+        cost_with_tax = 0
         for i in shopping_list:
             if b == 'luxury':
-                cost += luxury_price
+                luxury_tax =  luxury_price * 0.2
+                including_tax = luxury_price + luxury_tax
+                cost_with_tax += including_tax
             elif b == 'essential':
-                cost+= essential_price
+                essential_tax = essential_price * 0.1
+                including_tax = essential_price + essential_tax
+                cost_with_tax += including_tax
             else:
-                cost += gift_price
+                gift_tax = gift_price * 0.05
+                including_tax = gift_price + gift_tax
+                cost_with_tax += including_tax
         
-        print(cost)
-        shopping_list.append(cost)
+        print(cost_with_tax)
+        shopping_list.append(cost_with_tax)
         print(shopping_list)
 
     #if selection == '3':
