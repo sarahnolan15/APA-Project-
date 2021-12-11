@@ -137,4 +137,27 @@ while selection != '5':
     #if selection == '3':
         
 
-    #if selection == '4':
+    selection == '4':
+        dim_list = []
+        weight_list = []
+        count = int(input('how many items need to be packaged?: '))
+        for i in range(count):
+            width = int(input('enter width of item, in cm: '))
+            height = int(input('enter height of item, in cm: '))
+            lenght = int(input('enter lenght of item, in cm: '))
+            total_dim = width*height*lenght
+            dim_list.append(total_dim)
+        x = sum(dim_list)
+        print(x)
+        if x <= 200:
+            print('this order needs 1 box')
+        elif x > 200 and x <= 400:
+            print('this order needs 2 boxes')
+        elif x > 400 and x <= 600:
+            print('this order needs 3 boxes')
+        elif x > 600 and x <= 800:
+            print('this order needs 4 boxes')
+        elif x > 800 and x <= 1000:
+            print('this order needs 5 boxes')
+        else:
+            print('order must be collected by customer')
