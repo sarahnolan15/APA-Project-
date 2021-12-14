@@ -57,19 +57,7 @@ while selection != '5':
                 time= datetime.datetime.strptime(exp_date, "%Y-%m-%d")
                 items.append([item_name, item_type, exp_date])
             
-#######
-#stock control task 4
-#######
-                
-                for i in items:
-                    if item_type == 'luxury':
-                        cost += luxury_price
-                    elif item_type == 'essential':
-                        cost+= essential_price
-                    else:
-                        cost += gift_price
-    
-                print(cost)
+
 ######
 # stock control task 6
 ######
@@ -81,13 +69,12 @@ while selection != '5':
 #######              
     if selection == '2':
         choice = ' '
-        while choice != '6':
+        while choice != '5':
             print('enter 1 to add items to basket')
             print('enter 2 to see basket')
-            print('enter 3 to see counts')
-            print('enter 4 to see total cost')
-            print('enter 5 to calculate total including tax')
-            print('press 6 to return to home')
+            print('enter 3 to see total cost before')
+            print('enter 4 to see total after tax')
+            print('press 5 to return to home')
 
             choice = input('enter your choice: ')
                 
@@ -104,18 +91,13 @@ while selection != '5':
     
             if choice == '2':
                 print(shopping_list)
-                print(type_list)
-    
+                
+
             if choice == '3':
-                print(l_count)
-                print(e_count)
-                print(g_count)
+                total_price = l_count*luxury_price + e_count*essential_price + g_count*gift_price
+                print(f'€{total_price}')
 
             if choice == '4':
-                total_price = l_count*luxury_price + e_count*essential_price + g_count*gift_price
-                print(total_price)
-
-            if choice == '5':
                 for i in type_list:
                     if i == 'luxury':
                         luxury_tax = luxury_price * 0.2
@@ -130,8 +112,11 @@ while selection != '5':
                         total3 = gift_price + gift_tax
                         total += total3
 
-                print('total including tax')
-                print(total)
+                print('Tax on luxury items is 20%')
+                print('Tax on essential items is 10%')
+                print('Tax on gift items is 5%')
+                print(f'Total including tax: €{total}')
+                
 
 ################
 # calculator task 1-4
@@ -176,7 +161,7 @@ while selection != '5':
         one=int(twonewbalance / one_euro)  
         onenewbalance=twonewbalance-one*one_euro  
 
-        print(onehundred, "€100")
+        print(onehundred, "€100 Note")
         print (fifty,"€50 Note")  
         print (twenty,"€20 Note") 
         print (ten,"€10 Note") 
@@ -202,7 +187,7 @@ while selection != '5':
         twoc_money_back = int(fivec / two_cent) 
         twoc = fivec - twoc_money_back * two_cent
 
-        onec_money_back = int(twoc / one_cent)+ int(round((0.99),1))
+        onec_money_back = int(twoc / one_cent)
         onec = twoc - onec_money_back * one_cent
 
 
@@ -212,6 +197,7 @@ while selection != '5':
         print(fivec_money_back, '5 cent coin')
         print(twoc_money_back, '2 cent coin')
         print(onec_money_back, '1 cent coin')
+
 
         print(f'Your total change is €{moneyback}')
         
