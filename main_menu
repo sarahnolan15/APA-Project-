@@ -133,11 +133,90 @@ while selection != '5':
                 print('total including tax')
                 print(total)
 
+################
+# calculator task 1-4
+################
 
-    #if selection == '3':
+    if selection == '3':
+        one_hundred_euro = 100
+        fifty_euro = 50 
+        twenty_euro  = 20  
+        ten_euro = 10  
+        five_euro = 5  
+        two_euro = 2  
+        one_euro = 1 
+        fifty_cent = 0.5
+        twenty_cent = 0.20 
+        ten_cent = 0.10 
+        five_cent = 0.05 
+        two_cent = 0.02
+        one_cent = 0.01  
+ 
+        moneygiven = float(input("Enter how much money given: € ")) 
+        moneyback = moneygiven - total  
+
+        onehundred = int(moneyback / one_hundred_euro)
+        oneHnewbalance=moneyback-onehundred*one_hundred_euro
+
+        fifty = int(moneyback / fifty_euro)
+        fiftynewbalance=moneyback-fifty*fifty_euro 
+
+        twenty=int(fiftynewbalance / twenty_euro) 
+        twentynewbalance=fiftynewbalance-twenty*twenty_euro
+
+        ten=int(twentynewbalance / ten_euro)  
+        tennewbalance=twentynewbalance-ten*ten_euro 
+
+        five=int(tennewbalance / five_euro)  
+        fivenewbalance=tennewbalance-five*five_euro 
+
+        two= int(fivenewbalance / two_euro)  
+        twonewbalance=fivenewbalance-two*two_euro 
+
+        one=int(twonewbalance / one_euro)  
+        onenewbalance=twonewbalance-one*one_euro  
+
+        print(onehundred, "€100")
+        print (fifty,"€50 Note")  
+        print (twenty,"€20 Note") 
+        print (ten,"€10 Note") 
+        print (five,"€5 Note")  
+        print (two,"€2 Coin")
+        print (one,"€1 Coin")  
+
+
+        moneybacknew=moneyback-int(moneyback) 
+        fiftyc_money_back = int(moneybacknew / fifty_cent)  
+
+        cents = moneybacknew - fiftyc_money_back * fifty_cent 
+
+        twentyc_money_back = int(cents / twenty_cent) 
+        twentyc = cents - twentyc_money_back * twenty_cent  
+
+        tenc_money_back = int(twentyc / ten_cent) 
+        tenc = twentyc - tenc_money_back * ten_cent
+
+        fivec_money_back = int(tenc / five_cent) 
+        fivec = tenc - fivec_money_back * five_cent 
+
+        twoc_money_back = int(fivec / two_cent) 
+        twoc = fivec - twoc_money_back * two_cent
+
+        onec_money_back = int(twoc / one_cent)+ int(round((0.99),1))
+        onec = twoc - onec_money_back * one_cent
+
+
+        print(fiftyc_money_back, '50 cent coin' )
+        print(twentyc_money_back,'20 cent coin')  
+        print(tenc_money_back,'10 cent coin')  
+        print(fivec_money_back, '5 cent coin')
+        print(twoc_money_back, '2 cent coin')
+        print(onec_money_back, '1 cent coin')
+
+        print(f'Your total change is €{moneyback}')
         
 
-    selection == '4':
+    if selection == '4':
         dim_list = []
         weight_list = []
         count = int(input('how many items need to be packaged?: '))
