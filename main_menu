@@ -40,7 +40,7 @@ while selection != '5':
         choice = ' '
         while choice != '3':
             print('Enter 1 to add products')
-            print('Enter 2 to view stock')
+            print('Enter 2 to stock')
             print('Enter 3 to exit')
 
             choice = input('Enter your choice: ')
@@ -74,7 +74,7 @@ while selection != '5':
             print('enter 2 to see basket')
             print('enter 3 to see total cost before')
             print('enter 4 to see total after tax')
-            print('press 5 to return to home')
+            print('press 5 to exit')
 
             choice = input('enter your choice: ')
                 
@@ -135,9 +135,10 @@ while selection != '5':
         ten_cent = 0.10 
         five_cent = 0.05 
         two_cent = 0.02
-        one_cent = 0.01  
- 
-        moneygiven = float(input("Enter how much money given: € ")) 
+        one_cent = 0.01 
+
+        print('Your total amount to be paid is €{total}')
+        moneygiven = float(input("Enter how much money you want to pay: € ")) 
         moneyback = moneygiven - total  
 
         onehundred = int(moneyback / one_hundred_euro)
@@ -213,16 +214,16 @@ while selection != '5':
             total_dim = width*height*lenght
             dim_list.append(total_dim)
         x = sum(dim_list)
-        print(x)
-        if x <= 200:
+        print(f'Total Dimension is {x}')
+        if x <= 2000:
             print('this order needs 1 box')
-        elif x > 200 and x <= 400:
+        elif x > 2000 and x <= 4000:
             print('this order needs 2 boxes')
-        elif x > 400 and x <= 600:
+        elif x > 4000 and x <= 6000:
             print('this order needs 3 boxes')
-        elif x > 600 and x <= 800:
+        elif x > 6000 and x <= 8000:
             print('this order needs 4 boxes')
-        elif x > 800 and x <= 1000:
+        elif x > 8000 and x <= 10000:
             print('this order needs 5 boxes')
         else:
             print('order must be collected by customer')
