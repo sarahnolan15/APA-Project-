@@ -40,7 +40,7 @@ while selection != '5':
         choice = ' '
         while choice != '3':
             print('Enter 1 to add products')
-            print('Enter 2 to view orders')
+            print('Enter 2 to view stock')
             print('Enter 3 to exit')
 
             choice = input('Enter your choice: ')
