@@ -138,7 +138,7 @@ while selection != '5':
         two_cent = 0.02
         one_cent = 0.01 
 
-        print('Your total amount to be paid is €{total}')
+        print(f'Your total amount to be paid is €{total}')
         moneygiven = float(input("Enter how much money you want to pay: € ")) 
         moneyback = moneygiven - total  
 
