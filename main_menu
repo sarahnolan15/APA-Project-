@@ -79,6 +79,7 @@ while selection != '5':
             choice = input('enter your choice: ')
                 
             if choice == '1':
+                print(f'Items for stock: {items}')
                 a = input('enter the item that you would like to add:  ')
                 b = input('enter whether its a luxury, essential or gift item:  ')
                 shopping_list.append([a,b])
