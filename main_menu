@@ -29,7 +29,7 @@ while selection != '5':
     print('3.Correct change: ')
     print('4.Item Packaging: ')
 
-    selection = input('enter option 1-5: ')
+    selection = input('enter option 1-4: ')
 
     if selection == '1':
 
